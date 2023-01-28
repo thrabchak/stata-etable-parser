@@ -14,26 +14,17 @@
       <h1>Table Parsing Tool</h1>
     </section>
 
-    <section>
+    <section id="input-section">
       <h2>Input</h2>
       <p>Select the XLSX file that you would like to use.</p>
       <input type="file" class="form-control" id="input-file" required>
     </section>
 
-    <section >
+    <section id="preview-section">
       <h2>Table Preview</h2>
-
-      <p class="fw-lighter" id="text-no-data d-none">No data has been loaded.</p>
-      <div class="spinner-border d-none" role="status" id="spinner"></div>
-      <canvas-datagrid id="grid" class="">
-        [
-          {"col1": ".552214", "col2": ".1123265", "col3": ".5665"},
-          {"col4": "1516.546", "col2": "564.45", "col3": "8945.454"}
-        ]
-      </canvas-datagrid>
     </section>
 
-    <section>
+    <section id="settings-section">
       <h2>Settings</h2>
       <div class="input-group mb-3">
         <input type="text" class="form-control" id="string-input" oninput="evaluateInput()">
@@ -41,7 +32,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="output-section">
       <h2>Output</h2>
       <div class="input-group mb-3">
         <input class="form-control user-select-all" type="text" id="string-output" readonly>
