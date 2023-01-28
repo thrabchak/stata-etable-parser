@@ -17,26 +17,38 @@
     <section>
       <h2>Input</h2>
       <p>Select the XLSX file that you would like to use.</p>
-      <input type="file" class="form-control" id="inputFile" required>
+      <input type="file" class="form-control" id="input-file" required>
     </section>
 
     <section >
       <h2>Table Preview</h2>
+
+      <p class="fw-lighter" id="text-no-data d-none">No data has been loaded.</p>
+      <div class="spinner-border d-none" role="status" id="spinner"></div>
       <canvas-datagrid id="grid" class="">
         [
-          {"col1": "55.2214", "col2": "112.3265", "col3": "5465"},
-          {"col1": "1516.546", "col2": "564.45", "col3": "8945.454"}
+          {"col1": ".552214", "col2": ".1123265", "col3": ".5665"},
+          {"col4": "1516.546", "col2": "564.45", "col3": "8945.454"}
         ]
       </canvas-datagrid>
     </section>
 
     <section>
       <h2>Settings</h2>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="string-input" oninput="evaluateInput()">
+        <button class="btn btn-outline-secondary" type="button" id="button-select-cell" data-bs-toggle="button" disabled>Select Cell</button>
+      </div>
     </section>
 
     <section>
       <h2>Output</h2>
+      <div class="input-group mb-3">
+        <input class="form-control user-select-all" type="text" id="string-output" readonly>
+        <button type="button" class="btn btn-outline-primary" onclick="copyToClipboard()">Copy to Clipboard</button>
+      </div>
     </section>
-    
   </body>
+
+  <script lang="javascript" src="compute.js"></script>
 </html>
