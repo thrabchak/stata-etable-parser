@@ -14,14 +14,20 @@
       <h1>Table Parsing Tool</h1>
     </section>
 
-    <section id="input-section">
+    <section id="input-section" class="row">
       <h2>Input</h2>
-      <p>Select the XLSX file that you would like to use.</p>
+      <label for="input-file" class="form-label">Select the XLSX file that you would like to use.</label>
       <input type="file" class="form-control" id="input-file" required>
     </section>
 
     <section id="preview-section">
       <h2>Table Preview</h2>
+      <div class="row">
+        <select id="sheet-select" class="form-select col">
+          <option selected>Select sheet</option>
+        </select>
+        <p id="active-cell" class="col"></p>
+      </div>
     </section>
 
     <section id="settings-section">
